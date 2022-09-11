@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('_partials/head') %>
+  <body>
+    <%- include('_partials/nav') %>
+    <section class="hero">
+      <!-- Content of the hero -->
+      <div class="hero__content container">
+        <p>
+          Come,<br />
+          Let's draw you <br />
+          in your own image
+        </p>
+        <a href="#contact" class="hero__cta">Get started</a>
+      </div>
+    </section>
+    <section class="featured">
+      <div class="container">
+        <h2 class="featured__title">Featured Arts</h2>
+        <!-- This part will be generated dynamically when we hook up a database -->
+        <div class="featured__grid">
+          <!-- 1 -->
+          <a href="#" class="featured__grid-item">
+            <div class="grid-item__image">
+              <img src="/img/portrait-1.jpg" alt="Portrait" />
+            </div>
+            <div class="grid-item__text-box">
+              <h3 class="grid-item__title">Beautiful Couple</h3>
+            </div>
+          </a>
+
+          <!-- 2 -->
+          <a href="#" class="featured__grid-item">
+            <div class="grid-item__image">
+              <img src="/img/portrait-2.jpg" alt="Portrait" />
+            </div>
+            <div class="grid-item__text-box">
+              <h3 class="grid-item__title">Cuppy</h3>
+            </div>
+          </a>
+
+          <!-- 3 -->
+          <a href="#" class="featured__grid-item">
+            <div class="grid-item__image">
+              <img src="/img/portrait-3.jpg" alt="Portrait" />
+            </div>
+            <div class="grid-item__text-box">
+              <h3 class="grid-item__title">Fine Girl</h3>
+            </div>
+          </a>
+
+          <!-- 4 -->
+          <a href="#" class="featured__grid-item">
+            <div class="grid-item__image">
+              <img src="/img/portrait-4.jpg" alt="Portrait" />
+            </div>
+            <div class="grid-item__text-box">
+              <h3 class="grid-item__title">Finer Girl</h3>
+            </div>
+          </a>
+
+          <!-- 5 -->
+          <a href="#" class="featured__grid-item">
+            <div class="grid-item__image">
+              <img src="/img/portrait-5.jpg" alt="Portrait" />
+            </div>
+            <div class="grid-item__text-box">
+              <h3 class="grid-item__title">Big Man</h3>
+            </div>
+          </a>
+
+          <!-- 6 -->
+          <a href="#" class="featured__grid-item">
+            <div class="grid-item__image">
+              <img src="/img/portrait-6.jpg" alt="Portrait" />
+            </div>
+            <div class="grid-item__text-box">
+              <h3 class="grid-item__title">Another Couple</h3>
+            </div>
+          </a>
+
+          <!-- 7 -->
+          <a href="#" class="featured__grid-item">
+            <div class="grid-item__image">
+              <img src="/img/portrait-7.jpg" alt="Portrait" />
+            </div>
+            <div class="grid-item__text-box">
+              <h3 class="grid-item__title">Miss Nigeria</h3>
+            </div>
+          </a>
+
+          <!-- 8 -->
+          <a href="#" class="featured__grid-item">
+            <div class="grid-item__image">
+              <img src="/img/portrait-8.jpg" alt="Portrait" />
+            </div>
+            <div class="grid-item__text-box">
+              <h3 class="grid-item__title">Big Mummy</h3>
+            </div>
+          </a>
+        </div>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/bicciarts/"
+          class="featured__more"
+          >VIEW MORE
+          <div class="slider"></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-us" id="contact">
+      <div class="container">
+        <h2 class="contact-us__title">Contact Us</h2>
+        <form action="#" class="contact-us__form">
+          <div class="input-container">
+            <!-- Name -->
+            <div class="styled-input wide">
+              <input type="text" required />
+              <label>Name</label>
+            </div>
+
+            <!-- Email and Phone -->
+            <div class="email-phone">
+              <div class="styled-input">
+                <input type="text" required />
+                <label>Email</label>
+              </div>
+              <div class="styled-input">
+                <input type="text" required />
+                <label>Phone Number</label>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="styled-input wide">
+              <textarea required></textarea>
+              <label>Message</label>
+            </div>
+
+            <!-- Submit -->
+            <div class="btn-container">
+              <button class="btn-lrg submit-btn" type="submit">
+                Send Message
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="row one">
+          <div class="col address">
+            <p class="line">Contact your tasteful artist:</p>
+            <p class="line contact">
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="mailto: freshpresh57@gmail.com"
+                  >freshpresh57@gmail.com</a
+                >
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2348163048265">08163048265</a>
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2349160286100">09160286100</a>
+              </span>
+            </p>
+            <p class="line">Akobo, Ojurin, Ibadan</p>
+            <p class="line">Oyo State Nigeria</p>
+          </div>
+          <div class="col social">
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://web.facebook.com/precious.olamide.79"
+              class="footer-link"
+              >Facebook
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/dabicciofficial/"
+              class="footer-link"
+              >Instagram
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://twitter.com/BicciTheDoc"
+              class="footer-link"
+              >Twitter
+            </a>
+          </div>
+        </div>
+        <div class="row two copy">
+          <p class="line">Copyright 2022 © BicciArts. All Rights Reserved</p>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/app/index.js"></script>
+  </body>
+</html>

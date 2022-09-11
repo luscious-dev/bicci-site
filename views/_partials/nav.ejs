@@ -1,0 +1,49 @@
+<header class="nav">
+  <div class="top">
+    <div class="container">
+      <a href="/" class="nav__logo">
+        <span><i class="fa-solid fa-palette"></i></span> BicciArt
+      </a>
+      <div class="nav__links">
+        <div class="nav__link accounts">
+          <div class="text-icon-wrap">
+            <i class="fa-solid fa-circle-user"></i>
+            <span>Account</span>
+          </div>
+
+          <!-- Accounts submenu -->
+          <div class="accounts__menu">
+            <ul>
+              <li><a href="/sign-in/">Sign in</a></li>
+              <li><a href="/sign-up/">Register</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="/cart/" class="nav__link cart-link">
+          <div class="text-icon-wrap">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Cart</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="container">
+      <a href="/" class="nav__link <%= loc === 'Home'?'active':'' %>"
+        >Home
+        <div class="slider"></div>
+      </a>
+      <a
+        href="/gallery-walls/"
+        class="nav__link <%= loc === 'Gallery Wall'?'active':'' %>"
+        >Gallery Walls
+        <div class="slider"></div>
+      </a>
+      <a href="/about/" class="nav__link <%= loc === 'About'?'active':'' %>"
+        >About
+        <div class="slider"></div>
+      </a>
+    </div>
+  </div>
+</header>

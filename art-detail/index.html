@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Bicci Gallery | Home</title>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="top">
+        <div class="container">
+          <a href="/index.html" class="nav__logo">
+            <span><i class="fa-solid fa-palette"></i></span> BicciArt
+          </a>
+          <div class="nav__links">
+            <div class="nav__link accounts">
+              <div class="text-icon-wrap">
+                <i class="fa-solid fa-circle-user"></i>
+                <span>Account</span>
+              </div>
+
+              <!-- Accounts submenu -->
+              <div class="accounts__menu">
+                <ul>
+                  <li><a href="/sign-in/">Sign in</a></li>
+                  <li><a href="/sign-up/">Register</a></li>
+                </ul>
+              </div>
+            </div>
+            <a href="/cart/" class="nav__link cart-link">
+              <div class="text-icon-wrap">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="container">
+          <a href="/index.html" class="nav__link"
+            >Home
+            <div class="slider"></div>
+          </a>
+          <a href="/gallery-walls/" class="nav__link"
+            >Gallery Walls
+            <div class="slider"></div>
+          </a>
+          <a href="/about/" class="nav__link"
+            >About
+            <div class="slider"></div>
+          </a>
+        </div>
+      </div>
+    </header>
+    <section class="art-detail">
+      <!-- Content of the art detail -->
+
+      <div class="container">
+        <!-- Breadcrumb -->
+        <ul class="breadcrumbs">
+          <li><a href="/" data-nav-track="breadcrumb">Home</a></li>
+          <li><a href="#" data-nav-track="breadcrumb">Beautiful Couple</a></li>
+        </ul>
+        <div class="art-title">
+          <h2>Beautiful Couple</h2>
+        </div>
+
+        <div class="grid">
+          <!-- Carousel -->
+          <div class="carousel">
+            <div class="carousel__thumbnails">
+              <button type="button" class="active">
+                <span>
+                  <img src="/img/portrait-1.jpg" alt="" srcset="" />
+                </span>
+              </button>
+              <button type="button">
+                <span>
+                  <img src="/img/portrait-1.jpg" alt="" srcset="" />
+                </span>
+              </button>
+              <button type="button">
+                <span>
+                  <img src="/img/portrait-1.jpg" alt="" srcset="" />
+                </span>
+              </button>
+              <button type="button">
+                <span>
+                  <img src="/img/portrait-1.jpg" alt="" srcset="" />
+                </span>
+              </button>
+            </div>
+            <div class="carousel__image">
+              <div class="image">
+                <button type="button" class="zoomable">
+                  <img src="/img/portrait-1.jpg" alt="" srcset="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Configuration -->
+          <div class="configuration">
+            <div class="product-type">
+              <h3>Product Type</h3>
+              <div class="grid">
+                <!-- Original -->
+                <button type="button" id="original" class="active">
+                  <span class="image">
+                    <img src="/img/canvas-print.svg" alt="" />
+                  </span>
+                  <label> Original Image </label>
+                </button>
+                <!-- Print -->
+                <button type="button" id="print">
+                  <span class="image">
+                    <img src="/img/canvas-print.svg" alt="" />
+                  </span>
+                  <label> Canvas Print </label>
+                </button>
+              </div>
+            </div>
+            <div class="image-size">
+              <!-- Show several image sizes for print and none for original -->
+              <h3><span>Image Size</span></h3>
+              <div class="grid print">
+                <button type="button">
+                  <label> 10x12 </label>
+                </button>
+                <button type="button" class="active">
+                  <label> 12x16 </label>
+                </button>
+                <button type="button">
+                  <label> 16x20 </label>
+                </button>
+                <button type="button">
+                  <label> 18x24 </label>
+                </button>
+                <button type="button">
+                  <label> 20x24 </label>
+                </button>
+                <button type="button">
+                  <label> 24x30 </label>
+                </button>
+                <button type="button">
+                  <label> 24x36 </label>
+                </button>
+              </div>
+            </div>
+            <div class="add-to-cart">
+              <!-- Template: 20x20 solid faced canvas print -->
+              <div class="summary">
+                <span><label> 12" x 16"</label> Solid-faced Canvas Print</span>
+              </div>
+              <!-- Price -->
+              <div class="price-and-cart">
+                <div class="price">
+                  <span>#10,000</span>
+                </div>
+                <div class="cart">
+                  <button>Add To Cart</button>
+                </div>
+              </div>
+              <!-- Add to cart button -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="about-art">
+          <!-- About the artwork -->
+          <!-- <h2>About the Artwork</h2>
+          <h3>Beautiful Couple - Item #20034</h3> -->
+          <p class="details"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="row one">
+          <div class="col address">
+            <p class="line">Contact your tasteful artist:</p>
+            <p class="line contact">
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="mailto: freshpresh57@gmail.com"
+                  >freshpresh57@gmail.com</a
+                >
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2348163048265">08163048265</a>
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2349160286100">09160286100</a>
+              </span>
+            </p>
+            <p class="line">Akobo, Ojurin, Ibadan</p>
+            <p class="line">Oyo State Nigeria</p>
+          </div>
+          <div class="col social">
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://web.facebook.com/precious.olamide.79"
+              class="footer-link"
+              >Facebook
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/dabicciofficial/"
+              class="footer-link"
+              >Instagram
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://twitter.com/BicciTheDoc"
+              class="footer-link"
+              >Twitter
+            </a>
+          </div>
+        </div>
+        <div class="row two copy">
+          <p class="line">Copyright 2022 © BicciArts. All Rights Reserved</p>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/app/art-details.js"></script>
+  </body>
+</html>

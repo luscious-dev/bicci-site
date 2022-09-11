@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../_partials/head') %>
+  <body>
+    <%- include('../_partials/nav') %>
+    <section class="cart">
+      <div class="container">
+        <div class="cart-items-number">My Cart: 1 Items</div>
+        <div class="grid">
+          <div class="one">
+            <ul class="cart-items">
+              <li class="cart-item">
+                <div class="image">
+                  <img src="/img/portrait-1.jpg" alt="" srcset="" />
+                </div>
+                <div class="details">
+                  <h4 class="image-name">Beautiful Couple</h4>
+                  <p class="image-dimension">
+                    12" x 16" Solid-faced Canvas Print
+                  </p>
+                  <div class="actions">
+                    <!-- Quantity select. This is not available for original -->
+                    <select name="art-quantity" id="">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                    <!-- Remove button -->
+                    <button>Remove</button>
+                  </div>
+                  <p class="price">500,000</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="two">
+            <div class="content">
+              <p>Product Total: 500,000</p>
+              <div class="checkout">
+                <button>Proceed to checkout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="row one">
+          <div class="col address">
+            <p class="line">Contact your tasteful artist:</p>
+            <p class="line contact">
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="mailto: freshpresh57@gmail.com"
+                  >freshpresh57@gmail.com</a
+                >
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2348163048265">08163048265</a>
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2349160286100">09160286100</a>
+              </span>
+            </p>
+            <p class="line">Akobo, Ojurin, Ibadan</p>
+            <p class="line">Oyo State Nigeria</p>
+          </div>
+          <div class="col social">
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://web.facebook.com/precious.olamide.79"
+              class="footer-link"
+              >Facebook
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/dabicciofficial/"
+              class="footer-link"
+              >Instagram
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://twitter.com/BicciTheDoc"
+              class="footer-link"
+              >Twitter
+            </a>
+          </div>
+        </div>
+        <div class="row two copy">
+          <p class="line">Copyright 2022 © BicciArts. All Rights Reserved</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="/app/index.js"></script>
+  </body>
+</html>

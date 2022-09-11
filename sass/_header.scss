@@ -1,0 +1,160 @@
+// Navigation Styles
+.nav {
+  .top {
+    height: 80px;
+    background-color: $black;
+    border-bottom: 2px solid $dark-orange;
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      .nav__logo {
+        font-family: $bodoni;
+        display: inline-block;
+        // padding: 30px 2px;
+        color: $light;
+        font-size: 1.4em;
+        transition: color 0.4s ease-in-out;
+        text-align: left;
+
+        @include breakpoint(large) {
+          font-size: 1.575em;
+        }
+
+        &:hover {
+          color: $dark-orange;
+        }
+      }
+
+      .nav__links {
+        display: flex;
+
+        .nav__link {
+          position: relative;
+          color: $light-grey;
+          cursor: pointer;
+          padding-top: 10px;
+
+          .text-icon-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $black;
+            position: relative;
+            padding: 12px;
+            transition: all 200ms ease-in-out;
+            z-index: 2;
+          }
+          &.accounts {
+            position: relative;
+
+            .accounts__menu {
+              position: absolute;
+              background-color: $black;
+              top: 90%;
+              right: 13%;
+              border-top: 2px solid transparent;
+              height: 0px;
+              overflow: hidden;
+              transition: all 500ms ease-in-out;
+
+              ul {
+                list-style: none;
+                padding: 1.4rem 0;
+              }
+              a {
+                padding: 0.2em 6em;
+                display: block;
+                padding-left: 1.1em;
+                font-size: 0.8em;
+                color: $light-grey;
+
+                &:hover {
+                  color: white;
+                }
+              }
+
+              // &.open {
+              //   height: auto;
+              //   border-color: $orange;
+              // }
+            }
+
+            &:hover {
+              .accounts__menu {
+                height: 100px;
+                border-color: $orange;
+              }
+            }
+          }
+
+          i {
+            font-size: 20px;
+            margin-bottom: 3px;
+
+            @include breakpoint(medium) {
+              font-size: 25px;
+              margin-bottom: 5px;
+            }
+          }
+          span {
+            font-size: 14px;
+          }
+
+          &:not(:last-child) {
+            margin-right: 40px;
+          }
+
+          &:hover {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    height: 60px;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      .nav__link {
+        color: $black;
+        display: inline-block;
+        position: relative;
+        font-size: 0.8em;
+
+        .slider {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 120%;
+          height: 3px;
+          background-color: $dark-orange;
+          width: 0%;
+          transition: width 0.4s;
+        }
+
+        &:hover,
+        &.active {
+          .slider {
+            //   background-color: ;
+            width: 100%;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}

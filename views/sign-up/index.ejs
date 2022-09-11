@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../_partials/head') %>
+  <body>
+    <%- include('../_partials/nav') %>
+    <section class="sign-up">
+      <div class="container">
+        <h1>Register a new account</h1>
+        <div class="grid">
+          <div class="col col-1">
+            <p><span>*</span> indicates a required field</p>
+            <label for="sign-up-fname">First Name</label>
+            <div class="field">
+              <input
+                type="text"
+                id="sign-up-fname"
+              />
+              <div class="error">
+                <!--  -->
+                This field is required
+                <!--  -->
+              </div>
+            </div>
+            
+            <label for="sign-up-lname">Last Name</label>
+            <div class="field">
+              <input
+                type="text"
+                id="sign-up-lname"
+              />
+              <div class="error">
+                <!--  -->
+                This field is required
+                <!--  -->
+              </div>
+            </div>
+
+            <label for="sign-up-phone" class="no-important">Phone Number</label>
+            <div class="field">
+              <input
+                type="text"
+                id="sign-up-phone"
+              />
+              
+            </div>
+
+            <label for="sign-up-email">Email</label>
+            <div class="field">
+              <input
+                type="email"
+                placeholder="name@example.com"
+                id="sign-up-email"
+              />
+              <div class="error">
+                <!--  -->
+                This field is required
+                <!--  -->
+              </div>
+            </div>
+
+            <label for="sign-up-password">Password</label>
+            <div class="field">
+              <input type="password" placeholder="At Least 6 Characters" id="sign-up-password" />
+              
+              <div class="error">
+                <!--  -->
+                This field is required
+                <!--  -->
+              </div>
+            </div>
+            <label for="sign-up-vpassword">Verify Password</label>
+            <div class="field ">
+              <input type="password " id="sign-up-vpassword" />
+              <div class="error">
+                <!--  -->
+                This field is required
+                <!--  -->
+              </div>
+            </div>
+
+            <footer>
+              <button class="button" type="submit">
+                Register Account
+              </button>
+            </footer>
+          </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="row one">
+          <div class="col address">
+            <p class="line">Contact your tasteful artist:</p>
+            <p class="line contact">
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="mailto: freshpresh57@gmail.com"
+                  >freshpresh57@gmail.com</a
+                >
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2348163048265">08163048265</a>
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2349160286100">09160286100</a>
+              </span>
+            </p>
+            <p class="line">Akobo, Ojurin, Ibadan</p>
+            <p class="line">Oyo State Nigeria</p>
+          </div>
+          <div class="col social">
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://web.facebook.com/precious.olamide.79"
+              class="footer-link"
+              >Facebook
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/dabicciofficial/"
+              class="footer-link"
+              >Instagram
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://twitter.com/BicciTheDoc"
+              class="footer-link"
+              >Twitter
+            </a>
+          </div>
+        </div>
+        <div class="row two copy">
+          <p class="line">Copyright 2022 © BicciArts. All Rights Reserved</p>
+        </div>
+      </div>
+    </section>
+
+
+    <script src="/app/index.js"></script>
+  </body>
+</html>

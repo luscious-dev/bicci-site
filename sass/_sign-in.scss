@@ -1,0 +1,136 @@
+.sign-in {
+  h1 {
+    font-size: 1.6em;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1.5fr 1fr;
+    }
+  }
+
+  .col {
+    h2 {
+      font-size: 1.1em;
+      text-transform: capitalize;
+      text-align: left;
+      margin-bottom: 25px;
+    }
+    .field {
+      margin-bottom: 20px;
+
+      .error {
+        line-height: 1.15;
+        color: $error;
+        font-weight: bold;
+        margin-top: 5px;
+        font-size: 0.9rem;
+        display: none;
+      }
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+
+      &:not(.no-important)::after {
+        content: " *";
+        color: $error;
+      }
+    }
+
+    input {
+      border-radius: 0;
+      padding: 0 1em;
+      height: 48px;
+      line-height: 46px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition-property: border, background-color, color;
+      transition-duration: 250ms;
+      transition-timing-function: ease;
+      display: block;
+      width: 100%;
+    }
+
+    .button {
+      text-transform: capitalize;
+      display: inline-block;
+      cursor: pointer;
+      padding: 0 1.5rem;
+      font-size: 0.8em;
+      text-align: center;
+      height: 48px;
+      line-height: 42px;
+      transition: all 75ms ease;
+      border: 2px solid $black;
+      color: #fff;
+      background-color: $black;
+    }
+    footer {
+      text-align: right;
+
+      .error-message {
+        display: none;
+        line-height: 1.15;
+        font-size: 16px;
+        padding: 1rem 1rem 1rem 1.5rem;
+        background-color: #fff;
+        color: $error;
+        border: 2px solid $error;
+        margin-bottom: 1rem;
+        text-align: left;
+
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .account-reset-password {
+    display: none;
+    h2 {
+      font-size: 0.8em;
+    }
+  }
+
+  .col-1 {
+    // display: none;
+    h2 {
+      display: none;
+    }
+
+    @include breakpoint(medium) {
+      max-width: 80%;
+      h2 {
+        display: block;
+      }
+    }
+
+    .reset-password {
+      button {
+        background: transparent;
+        border: none;
+        color: black;
+        font-size: 16px;
+        text-align: right;
+        width: 100%;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .col-2 {
+    // display: none;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}

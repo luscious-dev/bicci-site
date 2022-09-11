@@ -1,0 +1,119 @@
+.cart {
+  // padding-top: 30px;
+
+  .cart-items-number {
+    margin-bottom: 20px;
+    font-size: 1.4em;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .one {
+      order: 2;
+      .cart-items {
+        .cart-item {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 20px;
+          font-size: 0.8em;
+          border-bottom: 1px solid $black;
+          padding: 30px 0;
+
+          .image {
+            width: 25%;
+
+            img {
+              width: 100%;
+            }
+          }
+          .details {
+            .image-name {
+              margin-bottom: 10px;
+            }
+            .image-dimension {
+              margin-bottom: 10px;
+            }
+            .actions {
+              margin-bottom: 20px;
+            }
+
+            .price {
+              font-weight: bold;
+              font-size: 1.3em;
+            }
+            select {
+              padding: 5px 10px;
+              //   padding: 1rem;
+            }
+            button {
+              font-size: 1rem;
+              padding: 5px 20px;
+            }
+          }
+
+          @include breakpoint(large) {
+            justify-content: start;
+          }
+        }
+      }
+    }
+
+    .two {
+      order: 1;
+      margin-bottom: 20px;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        p {
+          border: 1px solid $black;
+          padding: 30px 20px;
+          width: 100%;
+        }
+        .checkout {
+          width: 100%;
+        }
+        button {
+          width: 100%;
+          padding: 10px 15px;
+          //   max-width: 300px;
+        }
+      }
+    }
+
+    @include breakpoint(medium) {
+      //   grid-template-columns: 60% 40%;
+      gap: 20px;
+      .one {
+        .details {
+          width: 50%;
+        }
+      }
+      .two .content {
+        //   order: 2;
+        flex-direction: row;
+        gap: 30px;
+      }
+    }
+    @include breakpoint(large) {
+      grid-template-columns: 60% 40%;
+      gap: 30px;
+
+      .one {
+        order: 1;
+      }
+      .two {
+        order: 2;
+        .content {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

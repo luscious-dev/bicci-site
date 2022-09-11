@@ -1,0 +1,118 @@
+.footer {
+  background-color: $dark-orange;
+  height: 440px;
+  font-size: 0.7em;
+  color: $light;
+  padding-top: 95px;
+
+  @include breakpoint(large) {
+    font-size: 0.8em;
+    padding-top: 95px;
+    height: 500px;
+  }
+
+  a {
+    color: $light;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  .contact,
+  .social {
+    a {
+      margin: 7px;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .social {
+    a {
+      position: relative;
+
+      .slider {
+        background-color: white;
+      }
+      &:hover {
+        .slider {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+    // font-size: 1em;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .address {
+      order: 2;
+      .contact {
+        margin-bottom: 30px;
+        span {
+          display: block;
+          margin-bottom: 10px;
+          margin-left: 15px;
+        }
+      }
+      @include breakpoint(large) {
+        order: 1;
+      }
+    }
+    .social {
+      order: 1;
+      margin-bottom: 30px;
+
+      @include breakpoint(large) {
+        order: 2;
+      }
+    }
+    &.copy {
+      margin-top: 55px;
+      text-align: center;
+      font-size: 0.8em;
+      margin-top: 40px;
+
+      @include breakpoint(medium) {
+        margin-top: 65px;
+      }
+
+      @include breakpoint(large) {
+        margin-top: 100px;
+      }
+    }
+
+    @include breakpoint(medium) {
+      &.copy {
+      }
+      .address {
+        .contact {
+          margin-bottom: 1rem;
+          span {
+            display: inline;
+            margin-left: 0;
+          }
+        }
+      }
+
+      &.one {
+        flex-direction: row;
+      }
+    }
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  //   .row.copy {
+  //     margin-top: 100px;
+  //   }
+}

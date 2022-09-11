@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Bicci Gallery | Exhibition</title>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="top">
+        <div class="container">
+          <a href="/index.html" class="nav__logo">
+            <span><i class="fa-solid fa-palette"></i></span> BicciArt
+          </a>
+          <div class="nav__links">
+            <div class="nav__link accounts">
+              <div class="text-icon-wrap">
+                <i class="fa-solid fa-circle-user"></i>
+                <span>Account</span>
+              </div>
+
+              <!-- Accounts submenu -->
+              <div class="accounts__menu">
+                <ul>
+                  <li><a href="/sign-in/">Sign in</a></li>
+                  <li><a href="/sign-up/">Register</a></li>
+                </ul>
+              </div>
+            </div>
+            <a href="/cart/" class="nav__link cart-link">
+              <div class="text-icon-wrap">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="container">
+          <a href="/index.html" class="nav__link"
+            >Home
+            <div class="slider"></div>
+          </a>
+          <a href="/gallery-walls/" class="nav__link"
+            >Gallery Walls
+            <div class="slider"></div>
+          </a>
+          <a href="/about/" class="nav__link active"
+            >About
+            <div class="slider"></div>
+          </a>
+        </div>
+      </div>
+    </header>
+    <section class="about">
+      <div class="container">
+        <!-- This part will be generated dynamically when we hook up a database -->
+        <div class="about__content">
+          <div class="about__img">
+            <img src="/img/about-img.jpg" alt="" />
+          </div>
+          <div class="about__text">
+            <h2 class="about__title">ABOUT</h2>
+            <figure>
+              <blockquote>
+                <p>
+                  Olabisi Precious (populary known as Bicci) is a walking
+                  boatload of talent. Despite his responsibilities as a student
+                  of medicine, Bicci finds time to create magic in the form of
+                  portrait drawing and painting, as well as landscape drawing.
+                </p>
+                <p>
+                  Bicci credits
+                  <a target="_blank" href="https://laynejohnson.com/"
+                    >Layne Johnson</a
+                  >
+                  as his source of inspiration. He also regards his thriving art
+                  business as his greatest milestone yet.
+                </p>
+                <p>
+                  Concerning his plans for his art, Bicci's strategy is "Bigger
+                  and Better." He is currently working towards creating a
+                  private exhibition someday soon.
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                <cite title="Source Title">Articine 2022</cite>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="row one">
+          <div class="col address">
+            <p class="line">Contact your tasteful artist:</p>
+            <p class="line contact">
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="mailto: freshpresh57@gmail.com"
+                  >freshpresh57@gmail.com</a
+                >
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2348163048265">08163048265</a>
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2349160286100">09160286100</a>
+              </span>
+            </p>
+            <p class="line">Akobo, Ojurin, Ibadan</p>
+            <p class="line">Oyo State Nigeria</p>
+          </div>
+          <div class="col social">
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://web.facebook.com/precious.olamide.79"
+              class="footer-link"
+              >Facebook
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/dabicciofficial/"
+              class="footer-link"
+              >Instagram
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://twitter.com/BicciTheDoc"
+              class="footer-link"
+              >Twitter
+            </a>
+          </div>
+        </div>
+        <div class="row two copy">
+          <p class="line">Copyright 2022 © BicciArts. All Rights Reserved</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="/app/index.js"></script>
+  </body>
+</html>

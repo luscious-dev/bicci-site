@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../_partials/head') %>
+  <body>
+    <%- include('../_partials/nav') %>
+    <section class="sign-in">
+      <div class="container">
+        <h1>Sign in to your account</h1>
+        <div class="grid">
+          <div class="col col-1">
+            <h2 class="title">Already have an account? Sign in</h2>
+            <label for="sign-in-email">Email</label>
+            <div class="field">
+              <input
+                type="email"
+                placeholder="name@example.com"
+                id="sign-in-email"
+              />
+              <div class="error">
+                <!--  -->
+                This field is required
+                <!--  -->
+              </div>
+            </div>
+
+            <label for="sign-in-password">Password</label>
+            <div class="field">
+              <input type="password" id="sign-in-password" />
+              <div class="reset-password">
+                <button>
+                  <span>Forgot your password?</span>
+                </button>
+              </div>
+              <div class="error">
+                <!--  -->
+                This field is required
+                <!--  -->
+              </div>
+            </div>
+
+            <footer>
+              <div class="error-message">
+                <i class="fa-solid fa-triangle-exclamation"></i
+                ><span class="text">Email not found</span>
+              </div>
+              <button class="button" type="submit">
+                Sign in to my account
+              </button>
+            </footer>
+          </div>
+          <!-- rertr -->
+          <div class="col account-reset-password">
+            <h2 class="title">
+              Enter your email address and we'll send you a link to reset your
+              password.
+            </h2>
+            <label for="sign-in-email">Email</label>
+            <div class="field">
+              <input
+                type="email"
+                placeholder="name@example.com"
+                id="sign-in-email"
+              />
+              <div class="error">
+                <!--  -->
+                This field is required
+                <!--  -->
+              </div>
+            </div>
+
+            <footer>
+              <div class="error-message">
+                <i class="fa-solid fa-triangle-exclamation"></i
+                ><span class="text">Email not found</span>
+              </div>
+              <button class="button" type="submit">Cancel</button>
+              <button class="button" type="submit">Continue</button>
+            </footer>
+          </div>
+
+          <!-- erett -->
+          <div class="col col-2">
+            <h2>Don't have an account?</h2>
+            <p>
+              You can register a new account in seconds and immediately have
+              access to great features only available to account holders.
+            </p>
+            <footer>
+              <a class="button" href="/sign-up/">Register a new account</a>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="row one">
+          <div class="col address">
+            <p class="line">Contact your tasteful artist:</p>
+            <p class="line contact">
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="mailto: freshpresh57@gmail.com"
+                  >freshpresh57@gmail.com</a
+                >
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2348163048265">08163048265</a>
+              </span>
+              <span>
+                <i class="fa-solid fa-palette"></i>
+                <a href="tel:+2349160286100">09160286100</a>
+              </span>
+            </p>
+            <p class="line">Akobo, Ojurin, Ibadan</p>
+            <p class="line">Oyo State Nigeria</p>
+          </div>
+          <div class="col social">
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://web.facebook.com/precious.olamide.79"
+              class="footer-link"
+              >Facebook
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/dabicciofficial/"
+              class="footer-link"
+              >Instagram
+            </a>
+            <i class="fa-solid fa-palette"></i>
+            <a
+              target="_blank"
+              href="https://twitter.com/BicciTheDoc"
+              class="footer-link"
+              >Twitter
+            </a>
+          </div>
+        </div>
+        <div class="row two copy">
+          <p class="line">Copyright 2022 © BicciArts. All Rights Reserved</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="/app/index.js"></script>
+  </body>
+</html>

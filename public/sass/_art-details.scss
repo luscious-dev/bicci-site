@@ -1,0 +1,292 @@
+.art-detail {
+  padding-top: 20px;
+
+  // Art title
+  .art-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    h2 {
+      font-size: 1.5em;
+      text-transform: capitalize;
+      border-bottom: 1px solid $black;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint(large) {
+      justify-content: end;
+      margin-top: 0px;
+
+      h2 {
+        margin-right: 217px;
+      }
+    }
+  }
+
+  // Breadcrumbs
+  .breadcrumbs {
+    display: block;
+    list-style: none;
+    margin-bottom: 10px;
+
+    li {
+      display: inline-block;
+      font-size: 14px;
+
+      a {
+        text-decoration: underline;
+        color: $black;
+      }
+
+      &:first-of-type {
+        &::after {
+          content: "/";
+          margin-left: 10px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .carousel {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &__thumbnails {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin-right: 20px;
+        order: 2;
+        margin-bottom: 35px;
+
+        button {
+          width: 60px;
+          height: 60px;
+          padding: 5px;
+          background-color: $light;
+          border: 2px solid transparent;
+          cursor: pointer;
+
+          span {
+            width: 100%;
+            height: 100%;
+
+            img {
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
+
+          &.active,
+          &:hover {
+            border-color: $black;
+          }
+        }
+
+        @include breakpoint(large) {
+          flex-direction: column;
+          order: 1;
+        }
+      }
+
+      &__image {
+        margin-bottom: 30px;
+        width: 90%;
+        max-width: 400px;
+        order: 1;
+
+        .image {
+          width: 100%;
+
+          button {
+            cursor: zoom-in;
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        @include breakpoint(large) {
+          order: 2;
+          margin-right: 20px;
+          margin-bottom: 0px;
+          padding: 0px 15px;
+        }
+      }
+
+      @include breakpoint(large) {
+        flex-direction: row;
+      }
+    }
+
+    .configuration {
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 4.3em);
+        gap: 5px;
+        justify-content: center;
+
+        @include breakpoint(large) {
+          justify-content: start;
+        }
+      }
+
+      button {
+        padding: 5px;
+        background-color: $light;
+        border: 2px solid transparent;
+
+        &.active,
+        &:hover {
+          border-color: $black;
+          background-color: #eee;
+        }
+      }
+
+      .product-type {
+        margin-bottom: 30px;
+        h3 {
+          margin-bottom: 10px;
+          font-size: 1em;
+          text-align: center;
+
+          @include breakpoint(large) {
+            text-align: left;
+          }
+        }
+
+        button {
+          height: 124px;
+
+          .image {
+            display: inline-block;
+            width: 56px;
+            height: 53px;
+            margin-bottom: 5px;
+            img {
+              width: 100%;
+            }
+          }
+
+          label {
+            font-size: 16px;
+            display: inline-block;
+          }
+        }
+        @include breakpoint(large) {
+          margin-bottom: 20px;
+
+          h3 {
+            font-size: 0.8em;
+          }
+        }
+      }
+
+      .image-size {
+        margin-bottom: 20px;
+        h3 {
+          margin-bottom: 10px;
+          font-size: 1em;
+          text-align: center;
+
+          @include breakpoint(large) {
+            text-align: left;
+          }
+        }
+
+        button {
+          padding: 11px 14px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        label {
+          font-size: 16px;
+        }
+
+        @include breakpoint(large) {
+          h3 {
+            font-size: 0.8em;
+          }
+        }
+      }
+
+      .add-to-cart {
+        // width: 340px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $orange;
+        box-shadow: 0 10px 20px $black;
+        padding: 40px;
+        z-index: 5;
+
+        @include breakpoint(large) {
+          position: static;
+          box-shadow: none;
+          padding: none;
+        }
+
+        .summary {
+          text-align: left;
+          margin-bottom: 10px;
+          span {
+            font-size: 0.8em;
+
+            label {
+              font-weight: bold;
+            }
+          }
+        }
+
+        .price-and-cart {
+          display: flex;
+          gap: 30px;
+          align-items: center;
+
+          .price {
+            font-size: 1.5em;
+            font-weight: 700;
+          }
+
+          .cart {
+            button {
+              background: $black;
+              color: $light;
+              padding: 10px 20px;
+
+              &:hover {
+                background-color: #362929;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  margin-bottom: 160px;
+
+  @include breakpoint(large) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,30 @@
+// Colors
+//$orange: #f6aa1c;
+$orange: pink;
+$orangex: #db9718;
+$black: #220901;
+$dark-orange: #e34a19;
+$light: #ffff;
+$error: #c3311a;
+$light-grey: #ddd;
+
+// Fonts
+$bodoni: "Libre Bodoni", serif;
+$lato: "Lato", sans-serif;
+// $roboto: "Roboto Condensed", sans-serif;
+// $opensans: "Open Sans", sans-serif;
+
+$breakpoint-sizes: (
+  "small": 480px,
+  "medium": 768px,
+  "large": 1024px,
+  "xlarge": 1200px,
+);
+
+@mixin breakpoint($size) {
+  $point: map-get($breakpoint-sizes, $size);
+
+  @media screen and (min-width: $point) {
+    @content;
+  }
+}
