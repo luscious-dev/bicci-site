@@ -60,6 +60,7 @@
               height: 0px;
               overflow: hidden;
               transition: all 500ms ease-in-out;
+              z-index: 100;
 
               ul {
                 list-style: none;
@@ -85,8 +86,12 @@
 
             &:hover {
               .accounts__menu {
-                height: 115px;
+                height: 98px;
+
                 border-color: $orange;
+                @include breakpoint(medium) {
+                  height: 115px;
+                }
               }
             }
           }

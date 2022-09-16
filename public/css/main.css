@@ -128,6 +128,7 @@ a {
   height: 0px;
   overflow: hidden;
   transition: all 500ms ease-in-out;
+  z-index: 100;
 }
 .nav .top .container .nav__links .nav__link.accounts .accounts__menu ul {
   list-style: none;
@@ -144,8 +145,13 @@ a {
   color: white;
 }
 .nav .top .container .nav__links .nav__link.accounts:hover .accounts__menu {
-  height: 115px;
+  height: 98px;
   border-color: #f6aa1c;
+}
+@media screen and (min-width: 768px) {
+  .nav .top .container .nav__links .nav__link.accounts:hover .accounts__menu {
+    height: 115px;
+  }
 }
 .nav .top .container .nav__links .nav__link i {
   font-size: 20px;
@@ -777,6 +783,10 @@ a {
     text-align: left;
   }
 }
+.art-detail .grid .configuration .image-size .grid {
+  flex-wrap: wrap;
+  display: flex;
+}
 .art-detail .grid .configuration .image-size button {
   padding: 11px 14px;
   display: flex;
@@ -1278,8 +1288,8 @@ a {
 }
 .sign-up .col input {
   border-radius: 0;
-  padding: 0 1em;
-  height: 48px;
+  padding: 0 0.8em;
+  height: 42px;
   line-height: 46px;
   border: 1px solid #ccc;
   outline: none;
@@ -1292,6 +1302,12 @@ a {
 }
 .sign-up .col input.error-input {
   border-color: #c3311a;
+}
+@media screen and (min-width: 768px) {
+  .sign-up .col input {
+    padding: 0 1em;
+    height: 48px;
+  }
 }
 .sign-up .col .button {
   text-transform: capitalize;

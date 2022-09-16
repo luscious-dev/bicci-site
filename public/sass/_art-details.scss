@@ -207,6 +207,10 @@
             text-align: left;
           }
         }
+        .grid {
+          flex-wrap: wrap;
+          display: flex;
+        }
 
         button {
           padding: 11px 14px;
