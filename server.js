@@ -19,11 +19,17 @@ app.get("/about", (req, res) => {
 
 app.get("/art-detail", (req, res) => {
   let { id } = req.query;
-  for (let data of dataz) {
-    if (data.id == id) {
-      res.render("art-detail/index", { loc: "Art Detail", data });
-    }
+  let data = dataz.find((e) => e.id == id);
+  if (data) {
+    res.render("art-detail/index", { loc: "Art Detail", data });
+  } else {
+    res.send("This does not exist!");
   }
+  // for (let data of dataz) {
+  //   if (data.id == id) {
+  //     res.render("art-detail/index", { loc: "Art Detail", data });
+  //   }
+  // }
   // res.send("This does not exist!");
 });
 
