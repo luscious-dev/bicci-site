@@ -133,6 +133,7 @@
     }
 
     .configuration {
+      margin-bottom: 25px;
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, 4.3em);
@@ -279,6 +280,15 @@
           }
         }
       }
+    }
+  }
+  .about-art {
+    h2 {
+      font-family: "Libre Bodoni", serif;
+      text-align: center;
+      font-size: 1.4em;
+      text-transform: none;
+      margin-bottom: 16px;
     }
   }
 }

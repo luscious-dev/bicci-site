@@ -3,38 +3,23 @@
 const originalImg = document.querySelector("#original");
 const canvasPrint = document.querySelector("#print");
 let summarySize = document.querySelector(".summary span label");
-const sizeGrid = document.querySelector(".image-size .grid");
+const printSizeGrid = document.querySelector(".grid.print");
+const originalSizeGrid = document.querySelector(".grid.original");
+const artSizeInput = document.querySelector("[name=art-size]");
+const addToCart = document.querySelector(".cart button");
 // sizeGrid.innerText = "";
 
 let originalActive = true;
 let printActive = false;
 
-const originalSize = [12, 16];
-const printSizes = [
-  [10, 12],
-  [12, 16],
-  [16, 20],
-  [18, 24],
-  [20, 24],
-  [24, 30],
-  [24, 36],
-];
+originalSizeGrid.style.display = "flex";
+printSizeGrid.style.display = "none";
+artSizeInput.value = originalSizeGrid.children[0].innerText;
 
-let finalOutputSize = `${originalSize[0]}x${originalSize[1]}`;
-
-// This creates the buttons for the original and print arts
-function createSizeButton(size = originalSize) {
-  const button = document.createElement("button");
-  button.type = "button";
-  const label = document.createElement("label");
-  button.appendChild(label);
-  label.innerText = `${size[0]}x${size[1]}`;
-  return button;
-}
-
-let butt = createSizeButton();
-butt.classList.add("active");
-sizeGrid.append(butt);
+addToCart.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log(artSizeInput.value);
+});
 
 // Affect what happens when the type of purchased art is clicked
 // It modifies the imageSize grid
@@ -46,30 +31,25 @@ function onImageTypeClick() {
     originalActive = false;
     printActive = true;
   }
-  let output = "";
   if (originalActive == true) {
     originalImg.classList.add("active");
     canvasPrint.classList.remove("active");
-    sizeGrid.innerText = "";
-    let button = createSizeButton();
-    button.classList.add("active");
-    sizeGrid.appendChild(button);
-    finalOutputSize = `${originalSize[0]}x${originalSize[1]}`;
-    summarySize.textContent = finalOutputSize;
-    // output = button.children[0].innerText
+    originalSizeGrid.style.display = "flex";
+    printSizeGrid.style.display = "none";
+    artSizeInput.value = originalSizeGrid.children[0].innerText;
   }
 
   if (printActive == true) {
     originalImg.classList.remove("active");
     canvasPrint.classList.add("active");
-    sizeGrid.innerText = "";
-    finalOutputSize = `${printSizes[0][0]}x${printSizes[0][1]}`;
-    for (let size of printSizes) {
-      let button = createSizeButton(size);
-      button.addEventListener("click", printSizeClicked);
-      sizeGrid.appendChild(button);
+    originalSizeGrid.style.display = "none";
+    printSizeGrid.style.display = "flex";
+    for (let child of printSizeGrid.children) {
+      child.addEventListener("click", printSizeClicked);
     }
-    sizeGrid.children[0].classList.add("active");
+
+    printSizeGrid.children[0].classList.add("active");
+    artSizeInput.value = printSizeGrid.children[0].innerText;
   }
 }
 
@@ -80,7 +60,8 @@ function printSizeClicked() {
     child.classList.remove("active");
   }
   this.classList.add("active");
-  finalOutputSize = this.children[0].innerText;
+  let finalOutputSize = this.children[0].innerText;
+  artSizeInput.value = finalOutputSize;
   summarySize.textContent = finalOutputSize;
 }
 

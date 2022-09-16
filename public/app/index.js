@@ -27,29 +27,6 @@ function createFeaturedItem(art) {
   return a;
 }
 
-// let arts = {
-//   name: "Beautiful Couple",
-//   img: "/img/portrait-1.jpg",
-//   price: 10000,
-//   originalSize: [12, 16],
-//   printSizes: [
-//     [10, 12],
-//     [12, 16],
-//     [16, 20],
-//     [18, 24],
-//     [20, 24],
-//     [24, 30],
-//     [24, 36],
-//   ],
-//   isPrint: true,
-//   imgVariety: [
-//     "/img/portrait-1.jpg",
-//     "/img/portrait-1.jpg",
-//     "/img/portrait-1.jpg",
-//     "/img/portrait-1.jpg",
-//   ],
-// };
-
 featuredGrid.innerHTML = "";
 for (let art of arts.reverse()) {
   featuredGrid.prepend(createFeaturedItem(art));
