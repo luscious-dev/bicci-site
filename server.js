@@ -24,7 +24,7 @@ app.get("/art-detail", (req, res) => {
       res.render("art-detail/index", { loc: "Art Detail", data });
     }
   }
-  res.send("This does not exist!");
+  // res.send("This does not exist!");
 });
 
 app.get("/cart", (req, res) => {
